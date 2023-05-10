@@ -14,10 +14,10 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: rgb(193, 255, 234);
+  background-color: rgb(243, 243, 243);
 }
 .fullpage {
-  height: 100vh;
+  height:95vh;
   padding: 1rem;
 }
 /*********** header ***************/
@@ -76,5 +76,25 @@ body {
   padding: 1rem;
   min-width: 15rem;
   max-width: 20rem;
-  
+}
+/* ***********Recipes************* */
+.recipes{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.recipe {
+  width: 15vw;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+.imgcontainer {
+  height: 25vh;
+  background-color: white;
+  width: 100%;
 }

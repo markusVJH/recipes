@@ -17,14 +17,17 @@ const Recipes = () => {
           });
       }, []);
       return (
-        <div>
+        <div className='fullpage'>
+        <div className='recipes'>
          {recipes.map(recipe => (
-        <div key={recipe.id}>
+        <div key={recipe.id} className='recipe'>
             <h2>{recipe.name}</h2>
-            <img src={recipe.image} alt={recipe.name} />
+            <div className='imgcontainer'><img src={recipe.image} alt={recipe.name} /></div>
             <Link to={`/recipes/${recipe.id}`}>See more</Link>
         </div>
+        
 ))}
+        </div>
         </div>
       );
 };

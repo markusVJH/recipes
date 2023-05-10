@@ -31,6 +31,7 @@ const Adding = () => {
   };
 
   return (
+    <div className='fullpage'>
     <form className="form" onSubmit={handleSubmit}>
       <label htmlFor="name">Name</label>
       <input type="text" name="name" />
@@ -62,6 +63,7 @@ const Adding = () => {
       <textarea name="instructions"></textarea>
       <button type="submit">Add new recipe</button>
     </form>
+    </div>
   );
 };
 

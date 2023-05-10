@@ -26,7 +26,7 @@ const RecipeSingle = () => {
           <h1>{recipe.name}</h1>
           <h2>{recipe.author}</h2>
           <p>{recipe.description}</p>
-          <img src={recipe.image} alt={recipe.name} />
+          <div className='imgcontainer'><img src={recipe.image} alt={recipe.name} /></div>
           <h2>Ingredients</h2>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
