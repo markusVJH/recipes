@@ -11,6 +11,31 @@
         "3 - water"
       ],
       "id": 4
+    },
+    {
+      "name": "Pizza",
+      "author": "Mario",
+      "description": "mario pizza",
+      "image": "",
+      "instructions": "this is an instruction",
+      "ingredients": [
+        "5 - flour",
+        "3 - eggs",
+        "5 - asd",
+        "1 - tyu"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Pizza2",
+      "author": "Mario",
+      "description": "asdasd",
+      "image": "https://unsplash.com/photos/MQUqbmszGGM",
+      "instructions": "picture",
+      "ingredients": [
+        "2 - 1232"
+      ],
+      "id": 6
     }
   ]
 }

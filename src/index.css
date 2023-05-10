@@ -10,3 +10,28 @@ body {
   display: flex;
   flex-direction: column;
 }
+/*********** header ***************/
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(3, 31, 48);
+  color: white;
+  height: 5vh;
+  align-items: center;
+  padding: 1rem;
+}
+.nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+  gap: 2rem;
+}
+.nav ul li a:hover {
+  text-decoration: underline;
+  color: white;
+  gap: 2rem;
+}
