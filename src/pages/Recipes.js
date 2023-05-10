@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 
@@ -18,17 +19,12 @@ const Recipes = () => {
       return (
         <div>
          {recipes.map(recipe => (
-            <div key={recipe.id}>
-                <h2>{recipe.name}</h2>
-                <p>{recipe.description}</p>
-                <img src={recipe.image} alt={recipe.name} />
-                <ul>
-                    {recipe.ingredients.map(ingredient => (
-                    <li key={ingredient}>{ingredient}</li>
-                ))}
-                </ul>
-            </div>
-            ))}
+        <div key={recipe.id}>
+            <h2>{recipe.name}</h2>
+            <img src={recipe.image} alt={recipe.name} />
+            <Link to={`/recipes/${recipe.id}`}>See more</Link>
+        </div>
+))}
         </div>
       );
 };
