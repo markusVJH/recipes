@@ -1,17 +1,18 @@
 import React from 'react';
+import axios from 'axios';
 
 const Adding = () => {
     return (
         <form className="form" action='submit'>
-            <label for ="name">Name</label>
+            <label htmlFor ="name">Name</label>
             <input type="text" name="name"></input>
-            <label for ="author">Author</label>
+            <label htmlFor ="author">Author</label>
             <input type="text" name="author"></input>
-            <label for ="description">Description</label>
+            <label htmlFor ="description">Description</label>
             <textarea name="description"></textarea>
-            <label for ="image">Image</label>
+            <label htmlFor ="image">Image</label>
             <input type="text" name="image"></input>
-            <label for ="instructions">Instructions</label>
+            <label htmlFor ="instructions">Instructions</label>
             <textarea name="instructions"></textarea>
             <button type="submit">Add new recipe</button>
         </form>
