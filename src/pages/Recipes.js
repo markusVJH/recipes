@@ -17,13 +17,18 @@ const Recipes = () => {
       }, []);
       return (
         <div>
-          {recipes.map(recipe => (
+         {recipes.map(recipe => (
             <div key={recipe.id}>
-              <h2>{recipe.name}</h2>
-              <p>{recipe.description}</p>
-              <img src={recipe.image} alt={recipe.name} />
+                <h2>{recipe.name}</h2>
+                <p>{recipe.description}</p>
+                <img src={recipe.image} alt={recipe.name} />
+                <ul>
+                    {recipe.ingredients.map(ingredient => (
+                    <li key={ingredient}>{ingredient}</li>
+                ))}
+                </ul>
             </div>
-          ))}
+            ))}
         </div>
       );
 };

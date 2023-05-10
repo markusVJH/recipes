@@ -1,28 +1,16 @@
 {
   "recipes": [
     {
-      "id": 1,
-      "name": "Spaghetti Carbonara",
-      "author": "John Doe",
-      "origin": "Italy",
-      "description": "A classic Italian dish made with spaghetti, bacon, eggs, and Parmesan cheese.",
-      "image": ""
-    },
-    {
-      "id": 2,
-      "name": "Chicken Tikka Masala",
-      "author": "Jane Smith",
-      "origin": "India",
-      "description": "A popular Indian dish made with marinated chicken and a creamy tomato-based sauce.",
-      "image": ""
-    },
-    {
-      "name": "Pizza",
-      "author": "Mario",
-      "description": "asd",
+      "name": "test",
+      "author": "asdfd",
+      "description": "asdasd",
       "image": "",
-      "instructions": "asdasd",
-      "id": 3
+      "instructions": "asdasdas",
+      "ingredients": [
+        "2 - eggs",
+        "3 - water"
+      ],
+      "id": 4
     }
   ]
 }
