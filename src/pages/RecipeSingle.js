@@ -22,7 +22,7 @@ const RecipeSingle = () => {
       }
       
       return (
-        <div>
+        <div className='fullpage'>
           <h1>{recipe.name}</h1>
           <h2>{recipe.author}</h2>
           <p>{recipe.description}</p>

@@ -7,10 +7,6 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-color: rgb(2, 16, 26);
 }
-.form {
-  display: flex;
-  flex-direction: column;
-}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -97,4 +93,24 @@ body {
   height: 25vh;
   background-color: white;
   width: 100%;
+}
+/* ******************Form******************** */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  min-width: 20rem;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1rem;
+}
+.form textarea, .form input {
+  border-style: none;
+  height: 2rem;
+}
+.form textarea {
+  height: 5rem;
+}
+.form h2 {
+  text-align: center;
 }

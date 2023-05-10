@@ -33,18 +33,19 @@ const Adding = () => {
   return (
     <div className='fullpage'>
     <form className="form" onSubmit={handleSubmit}>
+        <h2>Add a new recipe</h2>
       <label htmlFor="name">Name</label>
-      <input type="text" name="name" />
+      <input type="text" name="name" placeholder='What is the name of the recipe?'/>
       <label htmlFor="author">Author</label>
-      <input type="text" name="author" />
+      <input type="text" name="author" placeholder='Who made the recipe?'/>
       <label htmlFor="description">Description</label>
-      <textarea name="description"></textarea>
+      <textarea name="description" placeholder='Describe the recipe :)'></textarea>
       <label htmlFor="image">Image</label>
-      <input type="text" name="image" />
+      <input type="text" name="image" placeholder='You can add an url link to an image of the dish'/>
       <label htmlFor="ingredients">Ingredients</label>
       <div className="ingredients">
-        <input type="text" name="ingredientQuantity" placeholder="Quantity" />
         <input type="text" name="ingredientName" placeholder="Ingredient" />
+        <input type="text" name="ingredientQuantity" placeholder="Amount of this ingredient" />
         <button type="button" onClick={() => {
           const ingredientsDiv = document.querySelector('.ingredients');
           const quantityInput = document.createElement('input');
@@ -60,7 +61,7 @@ const Adding = () => {
         }}>Add ingredient</button>
       </div>
       <label htmlFor="instructions">Instructions</label>
-      <textarea name="instructions"></textarea>
+      <textarea name="instructions" placeholder='Add the actual instructions to make the awesome dish here :)'></textarea>
       <button type="submit">Add new recipe</button>
     </form>
     </div>
