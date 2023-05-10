@@ -9,6 +9,7 @@ import RecipeSingle from './pages/RecipeSingle';
 
 function App() {
   return (
+    <div className='container'>
     <BrowserRouter>
       <Nav />
       <Routes>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/adding" element={<Adding />} />
       </Routes>
     </BrowserRouter>
+    </div>
   );
 }
 

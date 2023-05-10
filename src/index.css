@@ -5,10 +5,20 @@
 }
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: rgb(2, 16, 26);
 }
 .form {
   display: flex;
   flex-direction: column;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgb(193, 255, 234);
+}
+.fullpage {
+  height: 100vh;
+  padding: 1rem;
 }
 /*********** header ***************/
 .header {
@@ -25,13 +35,46 @@ body {
   gap: 2rem;
   list-style: none;
 }
-.nav ul li a {
+.nav ul li a, .header .logo a, .heroBanner a {
   text-decoration: none;
   color: white;
   gap: 2rem;
 }
-.nav ul li a:hover {
+.nav ul li a:hover{
   text-decoration: underline;
   color: white;
   gap: 2rem;
+}
+/* ************Home page************* */
+.heroBanner {
+  background-color: rgb(17, 59, 0);
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  color: white;
+}
+.homelinks {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.homebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28vw;
+  height: 15vh;
+  min-height: 10rem;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1rem;
+  min-width: 15rem;
+  max-width: 20rem;
+  
 }
