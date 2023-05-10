@@ -5,14 +5,24 @@ import { Link } from 'react-router-dom';
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [countries, setCountries] = useState({});
 
   useEffect(() => {
-    axios
-      .get('http://localhost:4002/recipes')
-      .then((response) => {
+    axios.get('http://localhost:4002/recipes')
+      .then(response => {
         setRecipes(response.data);
+        const countryNames = new Set(response.data.map(recipe => recipe.country));
+        const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`));
+        axios.all(countryRequests)
+          .then(responses => {
+            const countries = {};
+            responses.forEach(response => {
+              countries[response.data[0].name] = response.data[0].flags.svg;
+            });
+            setCountries(countries);
+          });
       })
-      .catch((error) => {
+      .catch(error => {
         console.log(error);
       });
   }, []);
@@ -27,6 +37,7 @@ const Recipes = () => {
 
   return (
     <div className='fullpage'>
+    <div className='recipespage'>
       <input
         className='searchbar'
         value={searchTerm}
@@ -36,6 +47,7 @@ const Recipes = () => {
       <div className='recipes'>
         {filteredRecipes.map((recipe) => (
           <div key={recipe.id} className='recipe'>
+          <div className='flag'><img src={countries[recipe.country]} alt={`${recipe.country} flag`} /></div>
             <h2>{recipe.name}</h2>
             <div className='imgcontainer'>
               <img src={recipe.image} alt={recipe.name} />
@@ -44,6 +56,7 @@ const Recipes = () => {
           </div>
         ))}
       </div>
+    </div>  
     </div>
   );
 };

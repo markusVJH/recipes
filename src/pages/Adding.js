@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Adding = () => {
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState('');
+
+  useEffect(() => {
+    axios.get('https://restcountries.com/v2/all?fields=name')
+      .then(response => {
+        setCountries(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -12,6 +25,7 @@ const Adding = () => {
       image: form.image.value,
       instructions: form.instructions.value,
       ingredients: [],
+      country: selectedCountry.name,
     };
     for (let i = 0; i < form.ingredientQuantity.length; i++) {
       const quantity = form.ingredientQuantity[i].value;
@@ -33,7 +47,7 @@ const Adding = () => {
   return (
     <div className='fullpage'>
     <form className="form" onSubmit={handleSubmit}>
-        <h2>Add a new recipe</h2>
+    <h2>Add a new recipe</h2>
       <label htmlFor="name">Name</label>
       <input type="text" name="name" placeholder='What is the name of the recipe?'/>
       <label htmlFor="author">Author</label>
@@ -42,6 +56,13 @@ const Adding = () => {
       <textarea name="description" placeholder='Describe the recipe :)'></textarea>
       <label htmlFor="image">Image</label>
       <input type="text" name="image" placeholder='You can add an url link to an image of the dish'/>
+      <label htmlFor="country">Country</label>
+      <select name="country" value={selectedCountry ? selectedCountry.name : ''} onChange={(event) => setSelectedCountry(countries.find(country => country.name === event.target.value))}>
+        <option value="">Select a country</option>
+        {countries.map(country => (
+        <option key={country.name} value={country.name}>{country.name}</option>
+  ))}
+</select>
       <label htmlFor="ingredients">Ingredients</label>
       <div className="ingredients">
         <input type="text" name="ingredientName" placeholder="Ingredient" />
