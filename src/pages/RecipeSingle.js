@@ -6,6 +6,7 @@ const RecipeSingle = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
+
     
 
     useEffect(() => {
@@ -22,20 +23,30 @@ const RecipeSingle = () => {
       }
       
       return (
-        <div className='fullpage'>
+        <div className='fullpage single'>
+          <div className='tophalf'>
+          <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> <button onClick={() => navigate(-1)} className='backButton'>Back to recipes</button></div>
+         
+          <div className='info'>
           <h1>{recipe.name}</h1>
           <h2>{recipe.author}</h2>
           <p>{recipe.description}</p>
-          <div className='imgcontainer'><img src={recipe.image} alt={recipe.name} /></div>
+          </div>
+          </div>
+          <div className='bottomhalf'>
+          <div className='ingredients'>
           <h2>Ingredients</h2>
           <ul>
             {recipe.ingredients.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
-            ))}
+              ))}
           </ul>
+          </div>
+          <div className='instructions'>
           <h2>Instructions</h2>
           <p>{recipe.instructions}</p>
-          <button onClick={() => navigate(-1)}>Go back</button>
+          </div>
+          </div>
         </div>
       );
 };

@@ -13,8 +13,9 @@ body {
   background-color: rgb(243, 243, 243);
 }
 .fullpage {
-  height:95vh;
   padding: 1rem;
+  min-height: fit-content;
+  height: 100vh;
 }
 /*********** header ***************/
 .header {
@@ -98,11 +99,12 @@ body {
   background-color: rgb(255, 255, 255);
   border-style: solid;
   border-width: 1px;
+  border-color: rgb(179, 179, 179);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 3px;
   position: relative;
   transition: 0.2s ease-in-out;
 }
@@ -112,14 +114,15 @@ body {
   justify-content: center;
   align-items: center;
 }
-.mainCard h2 {
+.mainCard p {
   padding-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 .mainCard .more {
   text-decoration: none;
   padding-top: 0.5rem;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .mainCard .more:hover {
   color: rgb(3, 31, 48);
@@ -135,19 +138,64 @@ body {
 }
 .imgcontainer img {
   height: 25vh;
+  min-height: 12rem;
   width: 100%;
 }
 .flag img {
   position: absolute;
-  left: -6px;
-  top: -6px;
+  left: -10px;
+  top: -10px;
   height:3rem;
   width: 3rem;
   border-radius: 100%;
   z-index: 99;
-  border-style: solid;
+  border-style: none;
   border-width:1.5px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+}
+.fullpage .single {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.tophalf {
+  display: flex;
+  padding-bottom: 2rem;
+}
+.tophalf .imgcontainerSingle {
+  width: 45%;
+  margin: 0 auto;
+}
+.tophalf .info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 45%;
+  margin: 0 auto;
+}
+.bottomhalf {
+  display: flex;
+  min-height: fit-content;
+}
+.bottomhalf .ingredients {
+  width: 45%;
+  margin: 0 auto;
+}
+.bottomhalf .instructions {
+  width: 45%;
+  margin: 0 auto;
+}
+.ingredients ul {
+  list-style: none;
+}
+
+/* ******************Recipes Single************ */
+.fullpage h1 {
+  text-align: center;
+}
+.imgcontainerSingle img {
+  width: 100%;
+  margin: 0 auto;
 }
 /* ******************Form******************** */
 .form {

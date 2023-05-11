@@ -49,7 +49,7 @@ const Recipes = () => {
           <div key={recipe.id} className='recipe'>
           <div className='flag'><img src={countries[recipe.country]} alt={`${recipe.country} flag`} /></div>
           <div className='mainCard'>
-            <h2>{recipe.name}</h2>
+            <p>{recipe.name}</p>
             <div className='imgcontainer'>
               <img src={recipe.image} alt={recipe.name} />
             </div>
