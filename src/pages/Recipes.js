@@ -48,12 +48,15 @@ const Recipes = () => {
         {filteredRecipes.map((recipe) => (
           <div key={recipe.id} className='recipe'>
           <div className='flag'><img src={countries[recipe.country]} alt={`${recipe.country} flag`} /></div>
+          <div className='mainCard'>
             <h2>{recipe.name}</h2>
             <div className='imgcontainer'>
               <img src={recipe.image} alt={recipe.name} />
             </div>
-            <Link to={`/recipes/${recipe.id}`}>See more</Link>
+            <div className="more"><Link to={`/recipes/${recipe.id}`} className="more">See more</Link></div>
+          </div>  
           </div>
+
         ))}
       </div>
     </div>  

@@ -93,8 +93,11 @@ body {
 }
 .recipe {
   width: 25vw;
+  max-width: 15rem;
   height: 20rem;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,6 +105,24 @@ body {
   border-radius: 15px;
   position: relative;
   transition: 0.2s ease-in-out;
+}
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainCard h2 {
+  padding-bottom: 0.5rem;
+}
+.mainCard .more {
+  text-decoration: none;
+  padding-top: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+}
+.mainCard .more:hover {
+  color: rgb(3, 31, 48);
 }
 .recipe:hover {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
@@ -112,14 +133,21 @@ body {
   background-color: white;
   width: 100%;
 }
+.imgcontainer img {
+  height: 25vh;
+  width: 100%;
+}
 .flag img {
   position: absolute;
-  left: 5px;
-  top: 0px;
+  left: -6px;
+  top: -6px;
   height:3rem;
   width: 3rem;
-  border-radius: 40px;
+  border-radius: 100%;
   z-index: 99;
+  border-style: solid;
+  border-width:1.5px;
+  background-color: black;
 }
 /* ******************Form******************** */
 .form {
