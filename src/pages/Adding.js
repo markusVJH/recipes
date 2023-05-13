@@ -58,28 +58,36 @@ const Adding = () => {
       <input type="text" name="image" placeholder='You can add an url link to an image of the dish'/>
       <label htmlFor="country">Country</label>
       <select name="country" value={selectedCountry ? selectedCountry.name : ''} onChange={(event) => setSelectedCountry(countries.find(country => country.name === event.target.value))}>
-        <option value="">Select a country</option>
+        <option value="" disabled selected>Where is the recipe from? :)</option>
         {countries.map(country => (
         <option key={country.name} value={country.name}>{country.name}</option>
   ))}
 </select>
       <label htmlFor="ingredients">Ingredients</label>
       <div className="ingredients">
-        <input type="text" name="ingredientName" placeholder="Ingredient" />
-        <input type="text" name="ingredientQuantity" placeholder="Amount of this ingredient" />
+        
         <button type="button" onClick={() => {
-          const ingredientsDiv = document.querySelector('.ingredients');
-          const quantityInput = document.createElement('input');
-          quantityInput.type = 'text';
-          quantityInput.name = 'ingredientQuantity';
-          quantityInput.placeholder = 'Quantity';
-          const nameInput = document.createElement('input');
-          nameInput.type = 'text';
-          nameInput.name = 'ingredientName';
-          nameInput.placeholder = 'Ingredient';
-          ingredientsDiv.appendChild(quantityInput);
-          ingredientsDiv.appendChild(nameInput);
-        }}>Add ingredient</button>
+            const ingredientsDiv = document.querySelector('.ingredients');
+            const newIngredientContainer = document.createElement('div');
+            newIngredientContainer.className = 'selectIngredient';
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'text';
+            quantityInput.name = 'ingredientQuantity';
+            quantityInput.placeholder = 'Amount of this ingredient';
+            const nameInput = document.createElement('input');
+            nameInput.type = 'text';
+            nameInput.name = 'ingredientName';
+            nameInput.placeholder = 'Ingredient';
+            newIngredientContainer.appendChild(nameInput);
+            newIngredientContainer.appendChild(quantityInput);
+            ingredientsDiv.appendChild(newIngredientContainer);
+          }} >Add ingredient</button>
+       <div className="ingredients-container">
+    <div className="selectIngredient">
+      <input type="text" name="ingredientName" placeholder="Ingredient" className="name" />
+      <input type="text" name="ingredientQuantity" placeholder="Amount of this ingredient" />
+    </div>
+  </div>
       </div>
       <label htmlFor="instructions">Instructions</label>
       <textarea name="instructions" placeholder='Add the actual instructions to make the awesome dish here :)'></textarea>

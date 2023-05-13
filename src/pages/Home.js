@@ -12,14 +12,14 @@ const Home = () => {
                 </video>
                 <div className="overlay">
                     <h1>Super Recipes</h1>
-                    <p>Welcome to Super Recipes!! :) This is a Business College Helsinki project</p>
+
                     <Link to={`/recipes`}>Browse recipes</Link>
                 </div>
             </div>
             <div className='homelinks'>
             <div className='homebox'>
             <h3>Recipes</h3>
-            <p>Check out all the recipes here. You can search them by recipe name or country of origin.</p>
+            <p>Check out all the recipes here. You can search them by recipe name.</p>
             <Link to={`/recipes`}>All recipes</Link>
             </div>
             <div className='homebox'>
