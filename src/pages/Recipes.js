@@ -37,31 +37,32 @@ const Recipes = () => {
 
   return (
     <div className='fullpage'>
-    <div className='recipespage'>
-      <input
-        className='searchbar'
-        value={searchTerm}
-        onChange={handleSearchTermChange}
-        placeholder='Search recipes by name'
-      />
-      <div className='recipes'>
-        {filteredRecipes.map((recipe) => (
-          <div key={recipe.id} className='recipe'>
-          <div className='flag'><img src={countries[recipe.country]} alt={`${recipe.country} flag`} /></div>
-          <div className='mainCard'>
-            <p>{recipe.name}</p>
-            <div className='imgcontainer'>
-              <img src={recipe.image} alt={recipe.name} />
-            </div>
-            <div className="more"><Link to={`/recipes/${recipe.id}`} className="more">See more</Link></div>
-          </div>  
-          </div>
-
-        ))}
+      <div className='recipespage'>
+        <input
+          className='searchbar'
+          value={searchTerm}
+          onChange={handleSearchTermChange}
+          placeholder='Search recipes by name'
+        />
+        <div className='recipes'>
+          {filteredRecipes.map((recipe) => (
+            <Link to={`/recipes/${recipe.id}`} key={recipe.id} className='recipe'>
+              <div className='flag'>
+                <img src={countries[recipe.country]} alt={`${recipe.country} flag`} />
+              </div>
+                <p>{recipe.name}</p>
+              <div className='mainCard'>
+                <div className='imgcontainer'>
+                  <img src={recipe.image} alt={recipe.name} />
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>  
     </div>
   );
+  
 };
 
 export default Recipes;
