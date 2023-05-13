@@ -34,24 +34,46 @@ body {
 }
 .nav ul li a, .header .logo a, .heroBanner a {
   text-decoration: none;
-  color: white;
   gap: 2rem;
+  color: white;
 }
 .nav ul li a:hover{
   text-decoration: underline;
   color: white;
   gap: 2rem;
 }
+.active {
+  color: yellow;
+  font-weight: bold;
+}
 /* ************Home page************* */
 .heroBanner {
   background-color: rgb(17, 59, 0);
-  height: 20vh;
+  height: 20rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   border-radius: 20px;
   color: white;
+  position: relative;
+}
+.heroBanner video {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .homelinks {
   display: flex;
