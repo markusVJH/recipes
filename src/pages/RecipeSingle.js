@@ -26,7 +26,7 @@ const RecipeSingle = () => {
         <div className='fullpage single'>
           <div className='tophalf'>
           <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> 
-          <button onClick={() => navigate(-1)}  className="btn btn-normal">Back to recipes</button></div>
+          <button onClick={() => navigate(-1)}>Back to recipes</button></div>
          
           <div className='info'>
           <h1>{recipe.name}</h1>

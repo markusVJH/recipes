@@ -62,6 +62,22 @@
       ],
       "country": "Antarctica",
       "id": 6
+    },
+    {
+      "name": "food",
+      "author": "chef",
+      "description": "good food",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505",
+      "instructions": "1. First you make the dish\n\n2. ???\n\n3. Profit!",
+      "ingredients": [
+        "2L - This",
+        "3 table spoons - That",
+        "1 pack - Other thing",
+        "9 tons - Salt",
+        "12 - Eggs"
+      ],
+      "country": "Serbia",
+      "id": 7
     }
   ]
 }

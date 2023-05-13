@@ -170,6 +170,7 @@ body {
   border-width:1.5px;
   background-color: rgba(255, 255, 255, 0);
 }
+/* ******************Recipes Single************ */
 .fullpage .single {
   display: flex;
   flex-direction: column;
@@ -206,10 +207,6 @@ body {
   list-style: none;
 }
 
-/* ******************Recipes Single************ */
-.fullpage h1 {
-  text-align: center;
-}
 .imgcontainerSingle img {
   width: 100%;
   margin: 0 auto;
