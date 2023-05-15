@@ -11,19 +11,13 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background-image: linear-gradient(
-    to bottom,
-    #bbd7ff,
-    #cacdf2,
-    #d3c5e2,
-    #d5bfd2,
-    #d1bac4
-  );
+  background: linear-gradient(to top, #99d2e5, #ffffff);
 }
 .fullpage {
   padding: 1rem;
   min-height: fit-content;
-  height: 100vh;
+  min-height: 95vh;
+  height: fit-content;
 }
 /*********** header ***************/
 .header {
