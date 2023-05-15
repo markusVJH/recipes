@@ -1,5 +1,5 @@
 :root {
-  --primary-color1: rgb(0, 77, 75);
+  --primary-color1: rgb(56, 43, 173);
 }
 * {
   margin: 0;
@@ -9,12 +9,12 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  background-color: rgb(213, 213, 213);
+  background-color: rgb(255, 255, 255);
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(to top, #c9fffa, #ffffff);
+  background: linear-gradient(to top, #d1d1d1, #ffffff);
 }
 .fullpage {
   padding: 1rem;
@@ -111,6 +111,7 @@ body {
   color: var(--primary-color1);
 }
 /* ***********Recipes************* */
+
 .recipespage {
   display: flex;
   flex-direction: column;
@@ -273,10 +274,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
-.form textarea {
-  max-width: 800px;
-  min-width: 100px;
-}
 .form h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -300,8 +297,12 @@ textarea {
   padding: 1rem;
   margin-top: 1rem;
   width: 100%;
+  max-width: 800px;
+  min-width: 150px;
 }
-
+.steps-container {
+  width: 100%;
+}
 select option[disabled] {
   display: none;
 }

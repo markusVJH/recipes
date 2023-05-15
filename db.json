@@ -60,6 +60,72 @@
       ],
       "country": "Finland",
       "id": 9
+    },
+    {
+      "name": "Cuba Tostones",
+      "author": "",
+      "description": "Cuban Tostones are fried plantains. They are popular in many countries and Cuba is no exception. They are delicious sprinkled with just a touch of salt and always best just out of the fryer. You could always dip them in a little left over mojo sauce. They are served as a snack, or as a side with lechon asado or a Cuban sandwich. If you do don’t have a tostonera (tostones press) you can use the bottom of a heavy glass or a food can.",
+      "image": "https://www.internationalcuisine.com/wp-content/uploads/2015/03/Cuba-tostones-1024x685.jpg",
+      "instructions": [
+        "Pour 2-3 inches of oil into a deep-fat fryer or heavy skillet over medium-high heat. As the oil heats, cut the ends off of each plantain, and make a slice along the length of the skin. You should be able to remove the peel in one piece, unlike peeling a banana's skin one section at a time.",
+        "Slice each plantain into pieces about two inches long. Add the pieces to the hot oil Fry them for about two minutes until they start to get slightly golden, then flip them over, frying for another two minutes.",
+        "Remove the cooked pieces from the pan, and drain them on paper towels. They will be very hot, so let them cool for at least 1-3 minutes. Take one of the pieces, and smash it in a tostonera (tostones press).",
+        "If you don't have a tostonera, you can easily use wax paper the bottom of a glass or a food can. Place the plantain piece upright on wax paper, fold the wax paper over the top of it, and then smash it until it is 1/4 inch thick.",
+        "Once the cooking oil is hot again, add all of the plantain slices and fry them on both sides until golden brown (about 1-3 minutes). Remove the tostones from the oil, and drain them on paper towels.\n",
+        "Sprinkle with a little salt",
+        "Tasty"
+      ],
+      "ingredients": [
+        "3-4 cups - Cooking oil",
+        "2 - Green plantains",
+        "According to your taste - Salt"
+      ],
+      "country": "Cuba",
+      "id": 10
+    },
+    {
+      "name": "Kokoda fish",
+      "author": "Darlene",
+      "description": "Kokoda Fish is a popular snack or appetizer in many Pacific Island nations. \n\nThis kokoda fish is a little different with the addition of the creamy coconut.  A wonderful addition!   You can use any type of fresh fish that you love but generally a firm white fish works best for this recipe.  You can use either lemon or lime juice to \"cook\" the fish.  I used lemon juice.  You will need to plan ahead as the fish should \"cook\" about 6- 8 hours.",
+      "image": "https://www.turtlefiji.com/wp-content/uploads/2021/10/Kokonda.png",
+      "instructions": [
+        "Put the fresh white fish pieces in a non-reactive container and pour over the fresh lemon juice.  Cover and refrigerate, stirring occasionally to make sure all sides of the fish are cooked.",
+        "Remove the fish and completely drain the lemon juice the fish was cooked in.",
+        "Mix the minced garlic with coconut cream and set aside. ",
+        "To the fish, stir in gently the hard-boiled egg, tomato, cucumber and red onion.",
+        "Put the kokoda fish into four separate serving bowls and pour over the coconut cream. ",
+        "Serve with fried taro root chips or fried plantains for an authentic Papua New Guinean treat!"
+      ],
+      "ingredients": [
+        "2 lbs - White fish filet",
+        "1 cup - Lemon juice",
+        "3/4 cup - Coconut cream",
+        "2 - Eggs",
+        "1/2 - Medium red onion",
+        "1 - Cucumber",
+        "1 - Tomato"
+      ],
+      "country": "Papua New Guinea",
+      "id": 11
+    },
+    {
+      "name": "Montenegrin Prsut",
+      "author": "",
+      "description": "Montenegrin prsut is considered to be the national meat of Montenegro.  The famous dry-cured ham is similar to prosciutto which is popular in Italy just across the Adriatic sea.  It is said that it is the ocean air that dries the ham to perfection.  It is called Njeguski Prsut because it must come from this village to be the good stuff that Montenegro is famous for. ",
+      "image": "https://images.myguide-cdn.com/montenegro/companies/njeguski-prsut/large/njeguski-prsut-474780.jpg",
+      "instructions": [
+        "Arrange meat in individual pieces on a platter",
+        "arrange the cheese on the platter",
+        "Add olives",
+        "Repeat another layer for an easy to enjoy appetizer"
+      ],
+      "ingredients": [
+        "1 package - Njeguski prsut or prosciutto",
+        "1/2 lb - Soft sheep cheese cut in slices",
+        "1/2 lb - Black olives"
+      ],
+      "country": "Montenegro",
+      "id": 12
     }
   ]
 }
