@@ -7,8 +7,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: 'Didact Gothic', sans-serif;
   background-color: rgb(255, 255, 255);
 }
 .container {
@@ -21,8 +20,9 @@ body {
   min-height: fit-content;
   min-height: 94vh;
   height: fit-content;
-  border: solid 1px var(--primary-color1);
+  border: solid 1px rgb(189, 189, 189);
   border-top: none;
+  border-bottom: none;
 }
 /*********** header ***************/
 .header {
@@ -58,7 +58,7 @@ body {
 /* ************Home page************* */
 .heroBanner {
   background-color: var(--primary-color1);
-  height: 20rem;
+  height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,6 +103,7 @@ body {
   padding: 1rem;
   min-width: 15rem;
   max-width: 20rem;
+  border: solid 1px rgb(189, 189, 189);
 }
 .homebox a {
   color: black;
@@ -121,9 +122,7 @@ body {
   width: 20rem;
   height: 2rem;
   padding-left: 0.5rem;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px;
+  border: solid 1px rgb(189, 189, 189);
 }
 .recipes {
   padding-top: 2rem;
@@ -139,14 +138,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
   transition: 0.2s ease-in-out;
   text-decoration: none;
   overflow: hidden;
-  border-width: 0.5px;
-  border-style: solid;
-  border-color: black;
+  border: solid 1px rgb(189, 189, 189);
 }
 .recipe p {
   margin-top: 0.5rem;
@@ -160,8 +157,8 @@ body {
   align-items: center;
 }
 .recipe:hover {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.377);
+  transform: translateY(-3px);
 }
 .imgcontainer {
   height: 15rem;
@@ -172,20 +169,14 @@ body {
 .imgcontainer img {
   height: 15rem;
   width: 100%;
-  filter: grayscale(40%);
   transition: 0.2s ease-in-out;
-}
-.recipe:hover {
-  .imgcontainer img {
-    filter: grayscale(0%);
-  }
 }
 .flag img {
   position: absolute;
   left: 0px;
   bottom: 0px;
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: fit-content;
   z-index: 99;
   border-style: none;
   border-width: 1.5px;
@@ -232,7 +223,8 @@ body {
 .bottomhalf {
   display: flex;
   min-height: fit-content;
-  border-top-style: solid;
+  border-top: solid 1px rgb(189, 189, 189);
+  padding: 2rem;
 }
 .bottomhalf .ingredients {
   width: 45%;
@@ -256,8 +248,9 @@ body {
   list-style: decimal;
 }
 .imgcontainerSingle img {
+  height: 100%;
   max-height: 50vh;
-  max-width: 35vw;
+  max-width: 20vw;
   margin: 0 auto;
 }
 .list li {

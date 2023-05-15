@@ -36,7 +36,7 @@ const Recipes = () => {
   };
 
   return (
-    <div className='fullpage recipes'>
+    <div className='fullpage'>
       <div className='recipespage'>
         <input
           className='searchbar'
