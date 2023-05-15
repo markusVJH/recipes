@@ -4,13 +4,21 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: rgb(2, 16, 26);
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background-image: linear-gradient(to bottom, #bbd7ff, #cacdf2, #d3c5e2, #d5bfd2, #d1bac4);
+  background-image: linear-gradient(
+    to bottom,
+    #bbd7ff,
+    #cacdf2,
+    #d3c5e2,
+    #d5bfd2,
+    #d1bac4
+  );
 }
 .fullpage {
   padding: 1rem;
@@ -32,12 +40,14 @@ body {
   gap: 2rem;
   list-style: none;
 }
-.nav ul li a, .header .logo a, .heroBanner a {
+.nav ul li a,
+.header .logo a,
+.heroBanner a {
   text-decoration: none;
   gap: 2rem;
   color: white;
 }
-.nav ul li a:hover{
+.nav ul li a:hover {
   text-decoration: underline;
   color: white;
   gap: 2rem;
@@ -81,7 +91,6 @@ body {
   padding: 2rem;
   justify-content: space-between;
   flex-wrap: wrap;
-  
 }
 .homebox {
   display: flex;
@@ -108,7 +117,7 @@ body {
   padding-left: 0.5rem;
   border-style: none;
 }
-.recipes{
+.recipes {
   padding-top: 2rem;
   display: flex;
   justify-content: center;
@@ -154,20 +163,19 @@ body {
   transition: 0.2s ease-in-out;
 }
 .recipe:hover {
-  .imgcontainer img{
-     filter: grayscale(0%)
+  .imgcontainer img {
+    filter: grayscale(0%);
   }
- ;
 }
 .flag img {
   position: absolute;
   left: 0px;
   bottom: 0px;
-  height:3rem;
+  height: 3rem;
   width: 3rem;
   z-index: 99;
   border-style: none;
-  border-width:1.5px;
+  border-width: 1.5px;
   background-color: rgba(255, 255, 255, 0);
 }
 /* ******************Recipes Single************ */
@@ -175,6 +183,11 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+.backButton {
+  border-style: none;
+  height: 1.5rem;
+  width: 7rem;
 }
 .tophalf {
   display: flex;
@@ -194,6 +207,7 @@ body {
 .bottomhalf {
   display: flex;
   min-height: fit-content;
+  border-top-style: solid;
 }
 .bottomhalf .ingredients {
   width: 45%;
@@ -203,6 +217,13 @@ body {
   width: 45%;
   margin: 0 auto;
 }
+.ingredients,
+.instructions {
+  padding-top: 1rem;
+}
+.instructions h2 {
+  margin-bottom: 1rem;
+}
 .ingredients ul {
   list-style: none;
 }
@@ -210,6 +231,9 @@ body {
 .imgcontainerSingle img {
   width: 100%;
   margin: 0 auto;
+}
+.list li {
+  margin-top: 1rem;
 }
 /* ******************Form******************** */
 .form {
