@@ -203,17 +203,16 @@ body {
   padding-bottom: 2rem;
   position: relative;
 }
-.tophalf .imgcontainerSingle {
-  width: 45%;
-  margin: 0 auto;
-}
 .tophalf .info {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  width: 45%;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding-left: 2rem;
+}
+.info p {
+  line-height: 1.5;
 }
 .bottomhalf {
   display: flex;
@@ -243,6 +242,7 @@ body {
 }
 .imgcontainerSingle img {
   max-height: 50vh;
+  max-width: 35vw;
   margin: 0 auto;
 }
 .list li {
