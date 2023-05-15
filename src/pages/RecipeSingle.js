@@ -29,7 +29,7 @@ const RecipeSingle = () => {
           <button onClick={() => navigate(-1)} className="backButton">Back to recipes</button>
           <div className='info'>
           <h1>{recipe.name}</h1>
-          <h2>{recipe.author}</h2>
+          <h2>By: {recipe.author}</h2>
           <p>{recipe.description}</p>
           </div>
           </div>
