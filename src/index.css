@@ -11,7 +11,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(to top, #99d2e5, #ffffff);
+  background: linear-gradient(to top, #fff0da, #ffffff);
 }
 .fullpage {
   padding: 1rem;
@@ -23,7 +23,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(3, 31, 48);
+  background-color: rgb(0, 0, 0);
   color: white;
   height: 5vh;
   align-items: center;
@@ -109,7 +109,9 @@ body {
   width: 20rem;
   height: 2rem;
   padding-left: 0.5rem;
-  border-style: none;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
 }
 .recipes {
   padding-top: 2rem;
@@ -130,10 +132,14 @@ body {
   transition: 0.2s ease-in-out;
   text-decoration: none;
   overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
 .recipe p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  color: black;
 }
 .mainCard {
   display: flex;
@@ -148,6 +154,7 @@ body {
 .imgcontainer {
   height: 10rem;
   background-color: white;
+  min-width: 15rem;
   width: 100%;
 }
 .imgcontainer img {
@@ -182,10 +189,19 @@ body {
   border-style: none;
   height: 1.5rem;
   width: 7rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.backButton:hover {
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
 }
 .tophalf {
   display: flex;
   padding-bottom: 2rem;
+  position: relative;
 }
 .tophalf .imgcontainerSingle {
   width: 45%;
@@ -196,6 +212,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   width: 45%;
+  flex-wrap: wrap;
   margin: 0 auto;
 }
 .bottomhalf {
@@ -221,9 +238,11 @@ body {
 .ingredients ul {
   list-style: none;
 }
-
+.instructions ul {
+  list-style: decimal;
+}
 .imgcontainerSingle img {
-  width: 100%;
+  max-height: 50vh;
   margin: 0 auto;
 }
 .list li {
@@ -280,7 +299,7 @@ button[type="button"] {
 }
 
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #000000;
   border: none;
   border-radius: 0.5rem;
   color: #fff;
@@ -293,7 +312,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #0069d9;
+  background-color: #3a3a3a;
 }
 
 .ingredients-container {

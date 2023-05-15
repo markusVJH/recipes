@@ -1,83 +1,22 @@
 {
   "recipes": [
     {
-      "name": "xzfbzdf",
-      "author": "zdfbzdf",
-      "description": "xfdgnbxfdgn",
-      "image": "https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "instructions": "sdfsdgzsrdg",
-      "ingredients": [
-        "345 - eggs",
-        "345 - sdfs"
+      "name": "Maldivian egg rolls",
+      "author": "Darlene",
+      "description": "bnmjkb kjbkjkjgkg kug uggiug ig ugjk j",
+      "image": "https://www.internationalcuisine.com/wp-content/uploads/2016/08/Maldives-appetizer-684x1024.jpg",
+      "instructions": [
+        "In a bowl mix together all the ingredients except the egg roll wrappers.",
+        "put a egg roll wrapper on your surface with a little water to seal the edges",
+        "fill the cabbage mixture into the wrapper fold the two right and left sides into the middle and then roll it up."
       ],
-      "country": "Andorra",
-      "id": 2
-    },
-    {
-      "name": "dfgd",
-      "author": "dfgdzg",
-      "description": "dfgdfg",
-      "image": "https://www.edsys.in/wp-content/uploads/pizza-768x480.jpeg",
-      "instructions": "dfgzdfg",
       "ingredients": [
-        "5 - eggs",
-        "5 - flour"
+        "1 - Hard boiled egg",
+        "4 - Hard boiled egg",
+        "4 - salt"
       ],
-      "country": "Fiji",
-      "id": 3
-    },
-    {
-      "name": "sdf",
-      "author": "szdf",
-      "description": "erthxfgnfgn xfgh xfgh xfdgh xfdgh xftgh srfth xfgh xfdgh ",
-      "image": "https://assets.entrepreneur.com/content/3x2/2000/20150918160532-pizza.jpeg",
-      "instructions": "fghxfghdxghfddxhfg",
-      "ingredients": [
-        "99 - eggs",
-        "2 - pepperoni",
-        "5 - pepperoni",
-        "5 l - flour"
-      ],
-      "country": "Turks and Caicos Islands",
-      "id": 4
-    },
-    {
-      "name": "asdasd",
-      "author": "asdasd",
-      "description": "asdasd",
-      "image": "https://assets.entrepreneur.com/content/3x2/2000/20150918160532-pizza.jpeg",
-      "instructions": "sdfsgdfhdfghdh",
-      "ingredients": [],
-      "country": "Gambia",
-      "id": 5
-    },
-    {
-      "name": "sdfsdgzsedasdasdfsdfsdgsdfgrth",
-      "author": "drhzdfh",
-      "description": "zdfhzdrfhse",
-      "image": "https://assets.entrepreneur.com/content/3x2/2000/20150918160532-pizza.jpeg",
-      "instructions": "dfghnfdgtn",
-      "ingredients": [
-        "2 - dfhzd"
-      ],
-      "country": "Antarctica",
+      "country": "Barbados",
       "id": 6
-    },
-    {
-      "name": "food",
-      "author": "chef",
-      "description": "good food",
-      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=556,505",
-      "instructions": "1. First you make the dish\n\n2. ???\n\n3. Profit!",
-      "ingredients": [
-        "2L - This",
-        "3 table spoons - That",
-        "1 pack - Other thing",
-        "9 tons - Salt",
-        "12 - Eggs"
-      ],
-      "country": "Serbia",
-      "id": 7
     }
   ]
 }

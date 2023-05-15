@@ -23,7 +23,7 @@ const Adding = () => {
       author: form.author.value,
       description: form.description.value,
       image: form.image.value,
-      instructions: form.instructions.value,
+      instructions: [],
       ingredients: [],
       country: selectedCountry.name,
     };
@@ -34,6 +34,13 @@ const Adding = () => {
         recipe.ingredients.push(`${quantity} - ${ingredient}`);
       }
     }
+    const stepFields = form.querySelectorAll('input[name^="step"]');
+    stepFields.forEach((stepField) => {
+      const stepValue = stepField.value;
+      if (stepValue) {
+        recipe.instructions.push(stepValue);
+      }
+    });
     axios.post('http://localhost:4002/recipes', recipe)
       .then(response => {
         console.log(response.data);
@@ -49,16 +56,16 @@ const Adding = () => {
     <form className="form" onSubmit={handleSubmit}>
     <h2>Add a new recipe</h2>
       <label htmlFor="name">Name</label>
-      <input type="text" name="name" placeholder='What is the name of the recipe?'/>
+      <input type="text" name="name" placeholder='What is the name of the recipe?' required/>
       <label htmlFor="author">Author</label>
       <input type="text" name="author" placeholder='Who made the recipe?'/>
       <label htmlFor="description">Description</label>
       <textarea name="description" placeholder='Describe the recipe :)'></textarea>
       <label htmlFor="image">Image</label>
       <input type="text" name="image" placeholder='You can add an url link to an image of the dish'/>
-      <label htmlFor="country">Country</label>
-      <select name="country" value={selectedCountry ? selectedCountry.name : ''} onChange={(event) => setSelectedCountry(countries.find(country => country.name === event.target.value))}>
-        <option value="" disabled selected>Where is the recipe from? :)</option>
+      <label htmlFor="country" required>Country</label>
+      <select name="country" value={selectedCountry ? selectedCountry.name : ''} onChange={(event) => setSelectedCountry(countries.find(country => country.name === event.target.value))} required>
+        <option value="" disabled defaultValue>Where is the recipe from? :)</option>
         {countries.map(country => (
         <option key={country.name} value={country.name}>{country.name}</option>
   ))}
@@ -73,26 +80,43 @@ const Adding = () => {
             const quantityInput = document.createElement('input');
             quantityInput.type = 'text';
             quantityInput.name = 'ingredientQuantity';
-            quantityInput.placeholder = 'Amount of this ingredient';
+            quantityInput.placeholder = 'Amount';
             const nameInput = document.createElement('input');
             nameInput.type = 'text';
             nameInput.name = 'ingredientName';
             nameInput.placeholder = 'Ingredient';
-            newIngredientContainer.appendChild(nameInput);
             newIngredientContainer.appendChild(quantityInput);
+            newIngredientContainer.appendChild(nameInput);
             ingredientsDiv.appendChild(newIngredientContainer);
           }} >Add ingredient</button>
        <div className="ingredients-container">
     <div className="selectIngredient">
-      <input type="text" name="ingredientName" placeholder="Ingredient" className="name" />
-      <input type="text" name="ingredientQuantity" placeholder="Amount of this ingredient" />
+      <input type="text" name="ingredientQuantity" placeholder="Amount" required/>
+      <input type="text" name="ingredientName" placeholder="Ingredient" className="name" required/>
     </div>
   </div>
       </div>
       <label htmlFor="instructions">Instructions</label>
-      <textarea name="instructions" placeholder='Add the actual instructions to make the awesome dish here :)'></textarea>
-      <button type="submit">Add new recipe</button>
-    </form>
+  <div className="steps-container">
+    <div className="step">
+      <input type="text" name="step1" placeholder="Step 1" required />
+    </div>
+  </div>
+  <button type="button" onClick={() => {
+    const stepsContainer = document.querySelector('.steps-container');
+    const stepDiv = document.createElement('div');
+    stepDiv.className = 'step';
+    const input = document.createElement('input');
+    const nextStepNumber = stepsContainer.children.length + 1;
+    input.type = 'text';
+    input.name = `step${nextStepNumber}`;
+    input.placeholder = `Step ${nextStepNumber}`;
+    input.required = true;
+    stepDiv.appendChild(input);
+    stepsContainer.appendChild(stepDiv);
+  }}>Add next step</button>
+  <button type="submit">Add new recipe</button>
+</form>
     </div>
   );
 };

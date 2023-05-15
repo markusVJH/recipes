@@ -25,9 +25,8 @@ const RecipeSingle = () => {
       return (
         <div className='fullpage single'>
           <div className='tophalf'>
-          <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> 
-          <button onClick={() => navigate(-1)} className="backButton">Back to recipes</button></div>
-         
+          <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> </div>
+          <button onClick={() => navigate(-1)} className="backButton">Back to recipes</button>
           <div className='info'>
           <h1>{recipe.name}</h1>
           <h2>{recipe.author}</h2>
@@ -45,7 +44,11 @@ const RecipeSingle = () => {
           </div>
           <div className='instructions'>
           <h2>Instructions</h2>
-          <p>{recipe.instructions}</p>
+          <ul className='list'>
+            {recipe.instructions.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+              ))}
+          </ul>
           </div>
           </div>
         </div>
