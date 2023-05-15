@@ -11,7 +11,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(to top, #fff0da, #ffffff);
+  background: linear-gradient(to top, #c9fffa, #ffffff);
 }
 .fullpage {
   padding: 1rem;
@@ -25,7 +25,7 @@ body {
   justify-content: space-between;
   background-color: rgb(0, 0, 0);
   color: white;
-  height: 5vh;
+  height: 3rem;
   align-items: center;
   padding: 1rem;
 }
@@ -248,6 +248,9 @@ body {
 .list li {
   margin-top: 1rem;
 }
+.step input {
+  width: fit-content;
+}
 /* ******************Form******************** */
 .form {
   display: flex;
@@ -256,7 +259,10 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
-
+.form textarea {
+  max-width: 800px;
+  min-width: 800px;
+}
 .form h2 {
   font-size: 2rem;
   margin-bottom: 2rem;

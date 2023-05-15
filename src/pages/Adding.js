@@ -34,7 +34,7 @@ const Adding = () => {
         recipe.ingredients.push(`${quantity} - ${ingredient}`);
       }
     }
-    const stepFields = form.querySelectorAll('input[name^="step"]');
+    const stepFields = form.querySelectorAll('textarea[name^="step"]');
     stepFields.forEach((stepField) => {
       const stepValue = stepField.value;
       if (stepValue) {
@@ -97,24 +97,23 @@ const Adding = () => {
   </div>
       </div>
       <label htmlFor="instructions">Instructions</label>
-  <div className="steps-container">
-    <div className="step">
-      <input type="text" name="step1" placeholder="Step 1" required />
-    </div>
+<div className="steps-container">
+  <div className="step">
+    <textarea name="step1" placeholder="Step 1" required></textarea>
   </div>
-  <button type="button" onClick={() => {
-    const stepsContainer = document.querySelector('.steps-container');
-    const stepDiv = document.createElement('div');
-    stepDiv.className = 'step';
-    const input = document.createElement('input');
-    const nextStepNumber = stepsContainer.children.length + 1;
-    input.type = 'text';
-    input.name = `step${nextStepNumber}`;
-    input.placeholder = `Step ${nextStepNumber}`;
-    input.required = true;
-    stepDiv.appendChild(input);
-    stepsContainer.appendChild(stepDiv);
-  }}>Add next step</button>
+</div>
+<button type="button" onClick={() => {
+  const stepsContainer = document.querySelector('.steps-container');
+  const stepDiv = document.createElement('div');
+  stepDiv.className = 'step';
+  const textarea = document.createElement('textarea');
+  const nextStepNumber = stepsContainer.children.length + 1;
+  textarea.name = `step${nextStepNumber}`;
+  textarea.placeholder = `Step ${nextStepNumber}`;
+  textarea.required = true;
+  stepDiv.appendChild(textarea);
+  stepsContainer.appendChild(stepDiv);
+}}>Add next step</button>
   <button type="submit">Add new recipe</button>
 </form>
     </div>
