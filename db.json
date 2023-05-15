@@ -27,6 +27,39 @@
       ],
       "country": "Maldives",
       "id": 8
+    },
+    {
+      "name": "Karelian Pasty",
+      "author": "Darlene",
+      "description": "Finland Karelian pasties are often times considered the national dish of Finland.  These rye pastries stuffed with a creamy rice or potato mixture and topped with egg butter can be served any time of day.  They are a little tricky to make but not bad.  Egg butter now that was a real hit, yum!",
+      "image": "https://cdn.valio.fi/mediafiles/06809767-a1c5-42e2-a4e6-a5e39da1cb6b/1440x1080-recipe-hero/4x3/karjalanpiirakat-1.jpg",
+      "instructions": [
+        "Rinse the rice and place it in boiling water. Simmer until most of the water is absorbed.Add the milk, lower the heat to a minimum, and partially cover the pot. Simmer until the milk has been absorbed and the rice has turned into a thick porridge. Season with salt and leave to cool.",
+        "Add the flour and salt to the water and mix into a solid, compact dough.",
+        "Form the dough into a strip and divide into 12 pieces.",
+        "Roll the pieces into flat thin ovals.",
+        "Spread some filling on each oval. Then fold the sides towards the center, pinching and making neat pleats along the edge.",
+        "Bake at 300 ºC for about 10 minutes.",
+        "Brush them well with melted butter or a butter and water mixture.",
+        "Place the pasties, separated with baking paper, in a bowl and cover with a towel to soften the crusts.",
+        "Serve warm with butter or egg butter which is made by mixing equal parts of butter, (cottage cheese) and chopped hard-boiled egg.",
+        "Nam nam nam"
+      ],
+      "ingredients": [
+        "1/2 cup - Cold water",
+        "1 1/8 cup - Plain flour",
+        "3/4 cup - Rye flour",
+        "1/2 tablespoon - Salt",
+        "1 cup - Water",
+        "4 cups - Milk",
+        "1 cup - Rice",
+        "1 teaspoon - Salt",
+        "1/4 cup - Cottage cheese",
+        "2 - Hard boiled eggs",
+        "1/4 - Soft butter"
+      ],
+      "country": "Finland",
+      "id": 9
     }
   ]
 }
