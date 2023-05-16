@@ -49,6 +49,7 @@ const Adding = () => {
       .catch(error => {
         console.log(error);
       });
+      alert(`Recipe ${form.name.value} added!`);
   };
 
   return (
