@@ -73,6 +73,13 @@ const Adding = () => {
         </select>
         <label htmlFor="ingredients">Ingredients</label>
         <div className="ingredients">
+          <div className="ingredients-container">
+            <div className="selectIngredient">
+              <input type="text" name="ingredientQuantity" placeholder="Amount" required/>
+              <input type="text" name="ingredientName" placeholder="Ingredient" className="name" required/>
+            </div>
+          </div>
+        </div>
           <button type="button" onClick={() => {
               const ingredientsDiv = document.querySelector('.ingredients');
               const newIngredientContainer = document.createElement('div');
@@ -89,13 +96,6 @@ const Adding = () => {
               newIngredientContainer.appendChild(nameInput);
               ingredientsDiv.appendChild(newIngredientContainer);
             }} >Add ingredient</button>
-          <div className="ingredients-container">
-            <div className="selectIngredient">
-              <input type="text" name="ingredientQuantity" placeholder="Amount" required/>
-              <input type="text" name="ingredientName" placeholder="Ingredient" className="name" required/>
-            </div>
-          </div>
-        </div>
         <label htmlFor="instructions">Instructions</label>
             <div className="steps-container">
               <div className="step">
