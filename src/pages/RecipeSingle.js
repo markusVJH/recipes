@@ -30,38 +30,37 @@ const RecipeSingle = ({flag}) => {
     if (!recipe) {
       return <div>Loading...</div>;
     }
-      
       return (
         <div className='fullpage single'>
           <div className='tophalf'>
-          <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> </div>
-          <button onClick={() => navigate(-1)} className="backButton">⬅ Back to recipes</button>
-          <div className='info'>
-          <div className='title'>
-          <img src={countryFlag} alt={`${recipe.country} flag`} className='singleflag'/>
-          <h1>{recipe.name}</h1> 
-          </div>
-          <h2>By: {recipe.author}</h2>
-          <p>{recipe.description}</p>
-          </div>
+            <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /></div>
+            <button onClick={() => navigate(-1)} className="backButton">⬅ Back to recipes</button>
+              <div className='info'>
+                <div className='title'>
+                <img src={countryFlag} alt={`${recipe.country} flag`} className='singleflag'/>
+                <h1>{recipe.name}</h1> 
+                </div>
+                <h2>By: {recipe.author}</h2>
+                <p>{recipe.description}</p>
+              </div>
           </div>
           <div className='bottomhalf'>
-          <div className='ingredients'>
-          <h2>Ingredients</h2>
-          <ul className='list'>
-            {recipe.ingredients.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
-              ))}
-          </ul>
-          </div>
-          <div className='instructions'>
-          <h2>Instructions</h2>
-          <ul className='list'>
-            {recipe.instructions.map((ingredient, index) => (
-              <li key={index}>{ingredient}</li>
-              ))}
-          </ul>
-          </div>
+            <div className='ingredients'>
+              <h2>Ingredients</h2>
+              <ul className='list'>
+                {recipe.ingredients.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                  ))}
+              </ul>
+            </div>
+            <div className='instructions'>
+              <h2>Instructions</h2>
+              <ul className='list inst'>
+              {recipe.instructions.map((ingredient, index) => (
+                  <li key={index}>{ingredient}</li>
+                  ))}
+              </ul>
+            </div>
           </div>
         </div>
       );
