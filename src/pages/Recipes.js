@@ -6,7 +6,7 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [countries, setCountries] = useState({});
-  
+
 
   useEffect(() => {
     axios.get('http://localhost:4002/recipes')
@@ -52,7 +52,9 @@ const Recipes = () => {
                 <p>{recipe.name}</p>
               <div className='mainCard'>
                 <div className='imgcontainer'>
-                  <img src={recipe.image} alt={recipe.name} />
+                  <div className='innerContainer'>
+                    <img src={recipe.image} alt={recipe.name} />
+                  </div>
                 </div>
               </div>
             </Link>

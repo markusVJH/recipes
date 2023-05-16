@@ -164,11 +164,16 @@ body {
   height: 15rem;
   background-color: white;
   min-width: 20rem;
-  width: 100%;
+}
+.innerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .imgcontainer img {
-  height: 15rem;
-  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
   transition: 0.2s ease-in-out;
 }
 .flag img {
@@ -178,9 +183,8 @@ body {
   height: 4rem;
   width: fit-content;
   z-index: 99;
-  border-style: none;
-  border-width: 1.5px;
-  background-color: rgba(255, 255, 255, 0);
+  box-shadow: #d1d1d1;
+  box-shadow: 3px -3px 10px rgb(255, 255, 255);
 }
 .singleflag {
   position: relative;
@@ -267,6 +271,7 @@ body {
   border: solid 1px rgb(189, 189, 189);
   padding: 0.3rem;
   border-radius: 3px;
+  background-color: rgb(247, 247, 247);
 }
 .step input {
   width: fit-content;
