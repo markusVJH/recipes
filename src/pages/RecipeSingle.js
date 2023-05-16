@@ -35,7 +35,7 @@ const RecipeSingle = ({flag}) => {
         <div className='fullpage single'>
           <div className='tophalf'>
           <div className='imgcontainerSingle'><img src={recipe.image} alt={recipe.name} /> </div>
-          <button onClick={() => navigate(-1)} className="backButton">Back to recipes</button>
+          <button onClick={() => navigate(-1)} className="backButton">⬅ Back to recipes</button>
           <div className='info'>
           <div className='title'>
           <img src={countryFlag} alt={`${recipe.country} flag`} className='singleflag'/>

@@ -146,9 +146,10 @@ body {
   border: solid 1px rgb(189, 189, 189);
 }
 .recipe p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
   color: black;
+  font-size: larger;
 }
 .mainCard {
   display: flex;
@@ -179,12 +180,12 @@ body {
 .flag img {
   position: absolute;
   left: 0px;
-  bottom: 0px;
-  height: 4rem;
+  top: 0px;
+  height: 3.5rem;
   width: fit-content;
   z-index: 99;
   box-shadow: #d1d1d1;
-  box-shadow: 3px -3px 10px rgb(255, 255, 255);
+  box-shadow: 3px 3px 10px rgb(255, 255, 255);
 }
 .singleflag {
   position: relative;
@@ -206,12 +207,15 @@ body {
   color: var(--primary-color1);
 }
 .backButton {
-  border-style: none;
+  border-style: solid;
+  border-color: var(--primary-color1);
+  border-width: 1px;
+  border-radius: 3px;
   height: 1.5rem;
-  width: 7rem;
+  width: 8rem;
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 0;
 }
 .backButton:hover {
   cursor: pointer;

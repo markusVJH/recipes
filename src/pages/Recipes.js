@@ -49,13 +49,13 @@ const Recipes = () => {
               <div className='flag'>
                 <img src={countries[recipe.country]} alt={`${recipe.country} flag`} />
               </div>
-                <p>{recipe.name}</p>
               <div className='mainCard'>
                 <div className='imgcontainer'>
                   <div className='innerContainer'>
                     <img src={recipe.image} alt={recipe.name} />
                   </div>
                 </div>
+                <p>{recipe.name}</p>
               </div>
             </Link>
           ))}
