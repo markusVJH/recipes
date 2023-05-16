@@ -126,6 +126,44 @@
       ],
       "country": "Montenegro",
       "id": 12
+    },
+    {
+      "name": "Nepali Pizza",
+      "author": "Darlene",
+      "description": "Nepali pizza called chatamari is a beloved street food.\n\nIt is easy to see why. It has a perfectly crunchy pizza crust made of rice flour. The topping can be anything from vegetarian style just with onions, and tomatoes or often it is made with some type of minced meat like buffalo or chicken along with the onions.\n\nIt also is topped with some cheese and an egg.\n\nThe chatamari is cooked on the stove top all at once and only takes a quick 7-8 minutes.",
+      "image": "https://www.internationalcuisine.com/wp-content/uploads/2017/07/Nepali-pizza-684x1024.jpg",
+      "instructions": [
+        "In a bowl mix together rice flour and water until you get a thin batter but not too watery. Add water slowly and more if needed.",
+        "In another bowl mix together the meat if using, onion, cilantro, cumin-coriander powder, turmeric powder, chili powder, pepper, salt, ginger-garlic paste, serrano and two eggs.",
+        "In a skillet that has a lid, heat a tablespoon of oil to medium high heat. A non-stick pan works great for this.",
+        "Pour the batter to make a 6 inch circle like a pancake.",
+        "Add a portion of the other mixture on top",
+        "Break a whole egg on top.",
+        "Add about a tablespoon of cheese",
+        "Cover and cook for 7-8 minutes",
+        "Serve hot you can ads some cilantro and tomatoes for garnish"
+      ],
+      "ingredients": [
+        "2 cups - Rice flour",
+        "3/4 cup - Water",
+        "4-6 - Eggs",
+        "1 cup - Minced meat (chicken or buffalo)",
+        "1/4 cup - Chopped fresh coriander",
+        "1 teaspoon - Cumin powder",
+        "1 teaspoon - Coriander powder",
+        "Salt - According to taste",
+        "1/2 - Onion",
+        "1 teaspoon - Red chili powder",
+        "1  - Serrano chili pepper",
+        "1 teaspoon - Schezwan pepper",
+        "1 tablespoon - Garlic-ginger paste",
+        "1 teaspoon - Turmeric powder",
+        "4 tablespoon - Shredded cheese",
+        "1 - Diced tomato",
+        "1 tablespoon - Oil per chatamari"
+      ],
+      "country": "Nepal",
+      "id": 13
     }
   ]
 }
