@@ -6,6 +6,7 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [countries, setCountries] = useState({});
+  
 
   useEffect(() => {
     axios.get('http://localhost:4002/recipes')
@@ -22,9 +23,6 @@ const Recipes = () => {
             setCountries(countries);
           });
       })
-      .catch(error => {
-        console.log(error);
-      });
   }, []);
 
   const filteredRecipes = recipes.filter((recipe) =>
