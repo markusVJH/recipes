@@ -1,6 +1,6 @@
 # Recipes
 
-This is a final project for a React course at Business College Helsinki. It is a recipe app built with Reactjs, where the user can create and broswe recipes. A local json server is used to store recipe data.
+This is a final project for a React course at Business College Helsinki. It is a recipe app built with Reactjs, where the user can create and browse recipes. A local json server is used to store recipe data.
 
 ## Technologies used
 
