@@ -13,13 +13,13 @@ const Recipes = () => {
     axios.get('http://localhost:4002/recipes')
       .then(response => {
         setRecipes(response.data);
-        const countryNames = new Set(response.data.map(recipe => recipe.country));
-        const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`));
+        const countryNames = new Set(response.data.map(recipe => recipe.country)); // storing unique country names in a set
+        const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`)); // converting the set of country names into an array
         axios.all(countryRequests)
           .then(responses => {
             const countries = {};
             responses.forEach(response => {
-              countries[response.data[0].name] = response.data[0].flags.svg;
+              countries[response.data[0].name] = response.data[0].flags.svg; // iterating over each response in the array, taking the name and flag and adding them to 'countries' object
             });
             setCountries(countries);
             setLoading(false);

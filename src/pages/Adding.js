@@ -34,7 +34,7 @@ const Adding = () => {
         recipe.ingredients.push(`${quantity} - ${ingredient}`);
       }
     }
-    const stepFields = form.querySelectorAll('textarea[name^="step"]');
+    const stepFields = form.querySelectorAll('textarea[name^="step"]'); // choosing all the textareas where name starts with 'step' :)
     stepFields.forEach((stepField) => {
       const stepValue = stepField.value;
       if (stepValue) {
