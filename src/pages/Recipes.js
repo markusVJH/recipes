@@ -6,6 +6,7 @@ const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [countries, setCountries] = useState({});
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const Recipes = () => {
               countries[response.data[0].name] = response.data[0].flags.svg;
             });
             setCountries(countries);
+            setLoading(false);
           });
       })
   }, []);
@@ -32,6 +34,10 @@ const Recipes = () => {
   const handleSearchTermChange = (event) => {
     setSearchTerm(event.target.value);
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className='fullpage'>
