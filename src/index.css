@@ -186,20 +186,19 @@ body {
   height: 3.5rem;
   width: fit-content;
   z-index: 99;
-  box-shadow: 3px 3px 10px rgb(255, 255, 255);
-  background-color: white;
+  filter: drop-shadow(5px 5px 10px #ffffff);
+}
+/* ******************Recipes Single************ */
+.title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 .singleflag {
   position: relative;
   height: 3rem;
   width: fit-content;
 }
-.title {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-/* ******************Recipes Single************ */
 .fullpage .single {
   display: flex;
   flex-direction: column;
