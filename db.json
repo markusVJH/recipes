@@ -51,34 +51,6 @@
       "id": 14
     },
     {
-      "name": "Maldivian egg rolls",
-      "author": "Darlene",
-      "description": "Maldivian egg rolls called bikseemiyaa make a scrumptious appetizer.  This treats were a real surprise.  They are often made with tuna as well.  This version was simply a hard boiled egg with some shredded cabbage, onion, curry leaves and a hot green chili.  They are wrapped up in an egg roll wrapper and deep fried.  We devoured them and I have made them several times since.  A quick and easy appetizer that is a guaranteed winner.",
-      "image": "https://thefoodfairy.files.wordpress.com/2012/08/dsc_9337.jpg",
-      "instructions": [
-        "In a bowl mix together all the ingredients except the egg roll wrappers.",
-        "put a egg roll wrapper on your surface with a little water to seal the edges",
-        "fill the cabbage mixture into the wrapper fold the two right and left sides into the middle and then roll it up.\n",
-        "Seal the edge with a little water\n",
-        "Put the egg rolls into your deep fryer or frying pan at 375 degrees and fry until golden brown.\n",
-        "Remove them from the oil and let drain on a paper towel to remove any excess oil.\n",
-        "Slice in half on the diagonal and serve hot.\n",
-        "Enjoy!"
-      ],
-      "ingredients": [
-        "1 - Hard boiled egg",
-        "1 - Green chili",
-        "1/2 - Onion",
-        "1 cup - Shredded cabbage",
-        "4 - Curry leaves",
-        "1 teaspoon - Lemon juice",
-        "Amount according to taste - Salt & pepper",
-        "4 - Egg roll wrappers"
-      ],
-      "country": "Maldives",
-      "id": 8
-    },
-    {
       "name": "Karelian Pasty",
       "author": "Darlene",
       "description": "Finland Karelian pasties are often times considered the national dish of Finland.  These rye pastries stuffed with a creamy rice or potato mixture and topped with egg butter can be served any time of day.  They are a little tricky to make but not bad.  Egg butter now that was a real hit, yum!",
@@ -112,6 +84,28 @@
       "id": 9
     },
     {
+      "name": "Roosamanna Ehk Mannavaht",
+      "author": "Darlene",
+      "description": "Estonia Raspberry semolina mousse is a wonderful dessert treat usually served with milk or cream.  It is also loved as a breakfast dish. The mousse can be made from all sorts of berry juice, just use what you have on hand or love.  Berry picking is a national pass time in Estonia and they have some pretty interesting berries there.  The more you whisk up this dessert, the lighter and fluffier it gets. Enjoy!",
+      "image": "https://www.internationalcuisine.com/wp-content/uploads/2015/06/Estonia-semolina-mousse-1024x684.jpg",
+      "instructions": [
+        "Dilute the juice with enough water to make up 1 quart of liquid (or simply use a quart of cranberry juice drink or something similar). Add sugar to taste and bring everything slowly to the boil.",
+        "Pour semolina quickly into the boiling juice, stirring vigorously to avoid any clumps. Simmer in a low heat for about 15 minutes, stirring regularly, until semolina has expanded and you have a thick sweet porridge. Taste - add more sugar, if necessary, or some vanilla sugar, grated lemon or lime zest.",
+        "Pour into a large bowl and let cool.\n",
+        "Whisk the cool sweet porridge until it's couple of shades lighter and a lot fluffier and lighter in texture.\n",
+        "Serve with cold milk."
+      ],
+      "ingredients": [
+        "1 cup - Concentrated juice (your choice!)",
+        "4 cups - Water",
+        "Or 1 quart - Berry juice (your choice!)",
+        "3/4 Cup - Wheat semolina/cream of wheat",
+        "up to 1/2 Cup - Sugar"
+      ],
+      "country": "Estonia",
+      "id": 15
+    },
+    {
       "name": "Cuba Tostones",
       "author": "Darlene",
       "description": "Cuban Tostones are fried plantains. They are popular in many countries and Cuba is no exception. They are delicious sprinkled with just a touch of salt and always best just out of the fryer. You could always dip them in a little left over mojo sauce. They are served as a snack, or as a side with lechon asado or a Cuban sandwich. If you do don’t have a tostonera (tostones press) you can use the bottom of a heavy glass or a food can.",
@@ -137,7 +131,7 @@
       "name": "Kokoda fish",
       "author": "Darlene",
       "description": "Kokoda Fish is a popular snack or appetizer in many Pacific Island nations. \n\nThis kokoda fish is a little different with the addition of the creamy coconut.  A wonderful addition!   You can use any type of fresh fish that you love but generally a firm white fish works best for this recipe.  You can use either lemon or lime juice to \"cook\" the fish.  I used lemon juice.  You will need to plan ahead as the fish should \"cook\" about 6- 8 hours.",
-      "image": "https://www.turtlefiji.com/wp-content/uploads/2021/10/Kokonda.png",
+      "image": "https://arousingappetites.com/wp-content/uploads/2022/08/Arousing-Appetites-8-of-10.jpeg",
       "instructions": [
         "Put the fresh white fish pieces in a non-reactive container and pour over the fresh lemon juice.  Cover and refrigerate, stirring occasionally to make sure all sides of the fish are cooked.",
         "Remove the fish and completely drain the lemon juice the fish was cooked in.",
@@ -214,28 +208,6 @@
       ],
       "country": "Nepal",
       "id": 13
-    },
-    {
-      "name": "Roosamanna Ehk Mannavaht",
-      "author": "Darlene",
-      "description": "Estonia Raspberry semolina mousse is a wonderful dessert treat usually served with milk or cream.  It is also loved as a breakfast dish. The mousse can be made from all sorts of berry juice, just use what you have on hand or love.  Berry picking is a national pass time in Estonia and they have some pretty interesting berries there.  The more you whisk up this dessert, the lighter and fluffier it gets. Enjoy!",
-      "image": "https://www.internationalcuisine.com/wp-content/uploads/2015/06/Estonia-semolina-mousse-1024x684.jpg",
-      "instructions": [
-        "Dilute the juice with enough water to make up 1 quart of liquid (or simply use a quart of cranberry juice drink or something similar). Add sugar to taste and bring everything slowly to the boil.",
-        "Pour semolina quickly into the boiling juice, stirring vigorously to avoid any clumps. Simmer in a low heat for about 15 minutes, stirring regularly, until semolina has expanded and you have a thick sweet porridge. Taste - add more sugar, if necessary, or some vanilla sugar, grated lemon or lime zest.",
-        "Pour into a large bowl and let cool.\n",
-        "Whisk the cool sweet porridge until it's couple of shades lighter and a lot fluffier and lighter in texture.\n",
-        "Serve with cold milk."
-      ],
-      "ingredients": [
-        "1 cup - Concentrated juice (your choice!)",
-        "4 cups - Water",
-        "Or 1 quart - Berry juice (your choice!)",
-        "3/4 Cup - Wheat semolina/cream of wheat",
-        "up to 1/2 Cup - Sugar"
-      ],
-      "country": "Estonia",
-      "id": 15
     }
   ]
 }
