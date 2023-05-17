@@ -38,6 +38,7 @@ body {
   display: flex;
   gap: 2rem;
   list-style: none;
+  align-items: center;
 }
 .nav ul li a,
 .header .logo a,
@@ -371,6 +372,9 @@ button[type="submit"] {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.steps-container {
+  width: 100%;
 }
 .selectIngredient {
   display: flex;
