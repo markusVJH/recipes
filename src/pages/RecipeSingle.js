@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, } from 'react-router-dom';
 import axios from 'axios';
 
-const RecipeSingle = ({flag}) => {
+const RecipeSingle = () => {
     const navigate = useNavigate();
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
@@ -18,13 +18,7 @@ const RecipeSingle = ({flag}) => {
             .then(countryResponse => {
               setCountryFlag(countryResponse.data[0].flags.svg);
             })
-            .catch(error => {
-              console.log(error);
-            });
         })
-        .catch(error => {
-          console.log(error);
-        });
     }, [id]);
   
     if (!recipe) {

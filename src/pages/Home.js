@@ -33,7 +33,7 @@ const Home = () => {
               </div>
               <div className='homebox'>
                 <h3>Want to know more about our projects?</h3>
-                <p>Visit our school's <a target="blank" href='https://en.bc.fi/'>homepage</a></p>
+                <p>Visit our school&apos;s <a target="blank" href='https://en.bc.fi/'>homepage</a></p>
               </div>
             </div>
         </div>

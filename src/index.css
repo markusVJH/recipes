@@ -17,7 +17,6 @@ body {
 }
 .fullpage {
   padding: 1rem;
-  min-height: fit-content;
   min-height: 94vh;
   height: fit-content;
   border: solid 1px rgb(189, 189, 189);
@@ -160,7 +159,7 @@ body {
   align-items: center;
 }
 .recipe:hover {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.377);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.377);
   transform: translateY(-3px);
 }
 .imgcontainer {
@@ -182,8 +181,8 @@ body {
 }
 .flag img {
   position: absolute;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   height: 3.5rem;
   width: fit-content;
   z-index: 99;
@@ -235,7 +234,6 @@ body {
   flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
-  margin: 0 auto;
   padding-left: 2rem;
 }
 .info p {
@@ -293,12 +291,12 @@ body {
     padding-bottom: 1rem;
   }
   .tophalf .info {
-    padding-left: 0rem;
+    padding-left: 0;
     align-items: center;
   }
   .bottomhalf {
     flex-direction: column;
-    padding: 0px;
+    padding: 0;
   }
   .bottomhalf .ingredients, .bottomhalf .instructions {
     width: 90vw;

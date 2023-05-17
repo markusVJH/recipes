@@ -17,7 +17,6 @@ const Recipes = () => {
         const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`)); // converting the set of country names into an array
         axios.all(countryRequests)
           .then(responses => {
-            const countries = {};
             responses.forEach(response => {
               countries[response.data[0].name] = response.data[0].flags.svg; // iterating over each response in the array, taking the name and flag and adding them to 'countries' object
             });
@@ -25,7 +24,7 @@ const Recipes = () => {
             setLoading(false);
           });
       })
-  }, []);
+  }, );
 
   const filteredRecipes = recipes.filter((recipe) =>
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
