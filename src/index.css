@@ -299,6 +299,12 @@ body {
     flex-direction: column;
     padding: 0px;
   }
+  .bottomhalf .ingredients, .bottomhalf .instructions {
+    width: 90vw;
+  }
+  .bottomhalf .instructions{
+    margin-left: 0.5rem;
+  }
 }
 /* ******************Form******************** */
 .form {
