@@ -39,10 +39,10 @@ const Adding = () => {
       }
     });
     axios.post('http://localhost:4002/recipes', recipe)
-      .then(response => {
+      .then(() => {
         form.reset();
+        alert(`Recipe ${form.name.value} added!`);
       })
-      alert(`Recipe ${form.name.value} added!`);
   };
 
   return (
