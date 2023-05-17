@@ -13,18 +13,19 @@ const Recipes = () => {
     axios.get('http://localhost:4002/recipes')
       .then(response => {
         setRecipes(response.data);
-        const countryNames = new Set(response.data.map(recipe => recipe.country)); // storing unique country names in a set
-        const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`)); // converting the set of country names into an array
+        const countryNames = new Set(response.data.map(recipe => recipe.country));
+        const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`));
         axios.all(countryRequests)
           .then(responses => {
+            const updatedCountries = {};
             responses.forEach(flagresponse => {
-              countries[flagresponse.data[0].name] = flagresponse.data[0].flags.svg; // iterating over each response in the array, taking the name and flag and adding them to 'countries' object
+              updatedCountries[flagresponse.data[0].name] = flagresponse.data[0].flags.svg;
             });
-            setCountries(countries);
+            setCountries(updatedCountries);
             setLoading(false);
           });
-      })
-  }, );
+      });
+  }, []);
 
   const filteredRecipes = recipes.filter((recipe) =>
     recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
