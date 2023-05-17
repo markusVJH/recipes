@@ -10,7 +10,6 @@ Built with:
 - JS
 - CSS
 - Reactjs
-- ...
 
 ## Acknowledgement
 
