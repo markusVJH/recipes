@@ -17,8 +17,8 @@ const Recipes = () => {
         const countryRequests = Array.from(countryNames).map(name => axios.get(`https://restcountries.com/v2/name/${name}?fields=name,flags`)); // converting the set of country names into an array
         axios.all(countryRequests)
           .then(responses => {
-            responses.forEach(response => {
-              countries[response.data[0].name] = response.data[0].flags.svg; // iterating over each response in the array, taking the name and flag and adding them to 'countries' object
+            responses.forEach(flagresponse => {
+              countries[flagresponse.data[0].name] = flagresponse.data[0].flags.svg; // iterating over each response in the array, taking the name and flag and adding them to 'countries' object
             });
             setCountries(countries);
             setLoading(false);

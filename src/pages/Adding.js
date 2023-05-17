@@ -10,9 +10,6 @@ const Adding = () => {
       .then(response => {
         setCountries(response.data);
       })
-      .catch(error => {
-        console.log(error);
-      });
   }, []);
 
   const handleSubmit = (event) => {
@@ -43,12 +40,8 @@ const Adding = () => {
     });
     axios.post('http://localhost:4002/recipes', recipe)
       .then(response => {
-        console.log(response.data);
         form.reset();
       })
-      .catch(error => {
-        console.log(error);
-      });
       alert(`Recipe ${form.name.value} added!`);
   };
 
