@@ -4,6 +4,7 @@ import axios from 'axios';
 const Adding = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
+  const [ingredientInputs, setIngredientInputs] = useState([{ quantity: '', name: '' }]);
 
   useEffect(() => {
     axios.get('https://restcountries.com/v2/all?fields=name')
@@ -11,7 +12,15 @@ const Adding = () => {
         setCountries(response.data);
       })
   }, []);
+  const handleIngredientChange = (index, field, value) => {
+    const newIngredients = [...ingredientInputs];
+    newIngredients[index][field] = value;
+    setIngredientInputs(newIngredients);
+  };
 
+  const handleAddIngredient = () => {
+    setIngredientInputs([...ingredientInputs, { quantity: '', name: '' }]);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -66,29 +75,34 @@ const Adding = () => {
         </select>
         <label htmlFor="ingredients">Ingredients</label>
         <div className="ingredients">
-          <div className="ingredients-container">
-            <div className="selectIngredient">
-              <input type="text" name="ingredientQuantity" placeholder="Amount" required/>
-              <input type="text" name="ingredientName" placeholder="Ingredient" className="name" required/>
+          {ingredientInputs.map((ingredient, index) => (
+            <div className="selectIngredient" key={index}>
+              <input
+                type="text"
+                name="ingredientQuantity"
+                placeholder="Amount"
+                value={ingredient.quantity}
+                onChange={(event) =>
+                  handleIngredientChange(index, 'quantity', event.target.value)
+                }
+                required
+              />
+              <input
+                type="text"
+                name="ingredientName"
+                placeholder="Ingredient"
+                value={ingredient.name}
+                onChange={(event) =>
+                  handleIngredientChange(index, 'name', event.target.value)
+                }
+                required
+              />
             </div>
-          </div>
+          ))}
         </div>
-          <button type="button" onClick={() => {
-              const ingredientsDiv = document.querySelector('.ingredients');
-              const newIngredientContainer = document.createElement('div');
-              newIngredientContainer.className = 'selectIngredient';
-              const quantityInput = document.createElement('input');
-              quantityInput.type = 'text';
-              quantityInput.name = 'ingredientQuantity';
-              quantityInput.placeholder = 'Amount';
-              const nameInput = document.createElement('input');
-              nameInput.type = 'text';
-              nameInput.name = 'ingredientName';
-              nameInput.placeholder = 'Ingredient';
-              newIngredientContainer.appendChild(quantityInput);
-              newIngredientContainer.appendChild(nameInput);
-              ingredientsDiv.appendChild(newIngredientContainer);
-            }} >Add ingredient</button>
+        <button type="button" onClick={handleAddIngredient}>
+          Add ingredient
+        </button>
         <label htmlFor="instructions">Instructions</label>
             <div className="steps-container">
               <div className="step">
