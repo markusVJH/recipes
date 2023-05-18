@@ -5,6 +5,7 @@ const Adding = () => {
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState('');
   const [ingredientInputs, setIngredientInputs] = useState([{ quantity: '', name: '' }]);
+  const [stepInputs, setStepInputs] = useState([{ value: '' }]);
 
   useEffect(() => {
     axios.get('https://restcountries.com/v2/all?fields=name')
@@ -21,36 +22,35 @@ const Adding = () => {
   const handleAddIngredient = () => {
     setIngredientInputs([...ingredientInputs, { quantity: '', name: '' }]);
   };
+
+  const handleStepChange = (index, value) => {
+    const newSteps = [...stepInputs];
+    newSteps[index].value = value;
+    setStepInputs(newSteps);
+  };
+
+  const handleAddStep = () => {
+    setStepInputs([...stepInputs, { value: '' }]);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
+    alert(`Recipe ${form.name.value} added!`);
     const recipe = {
       name: form.name.value,
       author: form.author.value,
       description: form.description.value,
       image: form.image.value,
-      instructions: [],
-      ingredients: [],
+      instructions: stepInputs.map(step => step.value).filter(value => value),
+      ingredients: ingredientInputs
+        .filter(ingredient => ingredient.quantity && ingredient.name)
+        .map(ingredient => `${ingredient.quantity} - ${ingredient.name}`),
       country: selectedCountry.name,
     };
-    for (let i = 0; i < form.ingredientQuantity.length; i++) {
-      const quantity = form.ingredientQuantity[i].value;
-      const ingredient = form.ingredientName[i].value;
-      if (quantity && ingredient) {
-        recipe.ingredients.push(`${quantity} - ${ingredient}`);
-      }
-    }
-    const stepFields = form.querySelectorAll('textarea[name^="step"]'); // choosing all the textareas where name starts with 'step' :)
-    stepFields.forEach((stepField) => {
-      const stepValue = stepField.value;
-      if (stepValue) {
-        recipe.instructions.push(stepValue);
-      }
-    });
     axios.post('http://localhost:4002/recipes', recipe)
       .then(() => {
         form.reset();
-        alert(`Recipe ${form.name.value} added!`);
       })
   };
 
@@ -105,22 +105,21 @@ const Adding = () => {
         </button>
         <label htmlFor="instructions">Instructions</label>
             <div className="steps-container">
-              <div className="step">
-                <textarea name="step1" placeholder="Step 1" required></textarea>
-              </div>
+          {stepInputs.map((step, index) => (
+            <div className="step" key={index}>
+              <textarea
+                name={`step${index + 1}`}
+                placeholder={`Step ${index + 1}`}
+                value={step.value}
+                onChange={(event) => handleStepChange(index, event.target.value)}
+                required
+              ></textarea>
             </div>
-          <button type="button" onClick={() => {
-            const stepsContainer = document.querySelector('.steps-container');
-            const stepDiv = document.createElement('div');
-            stepDiv.className = 'step';
-            const textarea = document.createElement('textarea');
-            const nextStepNumber = stepsContainer.children.length + 1;
-            textarea.name = `step${nextStepNumber}`;
-            textarea.placeholder = `Step ${nextStepNumber}`;
-            textarea.required = true;
-            stepDiv.appendChild(textarea);
-            stepsContainer.appendChild(stepDiv);
-          }}>Add next step</button>
+          ))}
+        </div>
+        <button type="button" onClick={handleAddStep}>
+          Add next step
+        </button>
           <button type="submit">Add new recipe</button>
       </form>
     </div>
