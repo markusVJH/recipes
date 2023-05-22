@@ -25,6 +25,9 @@ In the terminal run 'npx json-server -p4002 --watch db.json'.
 
 Then run 'npm start'.
 
-## Screenshot
+## Screenshots
 
+![Screenshot](/src/media/landingpage.JPG)
 ![Screenshot](/src/media/recipeimage.JPG)
+![Screenshot](/src/media/singlerecipe.JPG)
+![Screenshot](/src/media/form.JPG)
